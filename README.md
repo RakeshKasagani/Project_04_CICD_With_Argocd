@@ -1,3 +1,4 @@
+<img width="1095" height="473" alt="Screenshot 2025-09-22 150238" src="https://github.com/user-attachments/assets/1a5d1b56-5dd8-45cd-8329-f627d4517eb2" />
 
 # CI/CD Pipeline for Java Application with Jenkins, Docker, SonarQube, and Kubernetes (EKS)
 
