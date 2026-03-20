@@ -6,6 +6,7 @@
 
 The primary goal of this project is to establish a robust Continuous Integration and Continuous Deployment (CI/CD) pipeline for a Java application, automating the process of building, testing, and deploying the application to a Kubernetes cluster on AWS Elastic Kubernetes Service (EKS). By integrating modern DevOps tools such as Git, Jenkins, Maven, SonarQube, Docker Hub, ArgoCD, and Kubernetes, the pipeline ensures seamless code integration, quality assurance, and deployment to production.
 
+
 ### Goals
 1. **Continuous Integration (CI)**:
    - Automate code integration to merge changes into the main codebase.
