@@ -261,7 +261,7 @@ spec:
     spec:
       containers:
       - name: mc-app
-        image: devopshubg333/batch13:tag
+        image: rakesh268/latest:tag
         ports:
         - containerPort: 8080
 ```
