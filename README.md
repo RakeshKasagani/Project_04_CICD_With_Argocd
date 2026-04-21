@@ -295,7 +295,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Cloning GitHub Repo'
-                git credentialsId: 'github-token', url: 'https://github.com/devopstraininghub/mindcircuit13.git'
+                git credentialsId: 'github-token', url:'https://github.com/RakeshKasagani/Project_04_CICD_With_Argocd.git'
             }
         }
         stage('SonarQube Scan') {
@@ -315,7 +315,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building Docker Image'
-                sh 'docker build -t devopshubg333/batch13:${BUILD_NUMBER} .'
+                sh 'docker build -t rakesh268/lates:${BUILD_NUMBER} .'
             }
         }
         stage('Push to Docker Hub') {
@@ -323,7 +323,7 @@ pipeline {
                 echo 'Pushing to Docker Hub'
                 withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
                     sh 'docker login -u $DOCKER_USER -p $DOCKER_PASS'
-                    sh 'docker push devopshubg333/batch13:${BUILD_NUMBER}'
+                    sh 'docker push rakesh268/latest:${BUILD_NUMBER}'
                 }
             }
         }
@@ -337,7 +337,7 @@ pipeline {
                     sed -i "s/batch13:.*/batch13:${BUILD_NUMBER}/g" deploymentfiles/deployment.yml
                     git add .
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
-                    git push https://${GITHUB_TOKEN}@github.com/devopstraininghub/mindcircuit13.git HEAD:main
+                    git push https://${GITHUB_TOKEN}@github.com/RakeshKasagani/Project_04_CICD_With_Argocd.git HEAD:main
                     '''
                 }
             }
@@ -364,7 +364,7 @@ pipeline {
    - **Project**: `default`
    - **Sync Policy**: Manual (or Automatic for auto-sync)
    - **Source**:
-     - **Repository URL**: `https://github.com/devopstraininghub/mindcircuit13.git`
+     - **Repository URL**: `https://github.com/RakeshKasagani/Project_04_CICD_With_Argocd.git`
      - **Revision**: `HEAD`
      - **Path**: `deploymentfiles`
    - **Destination**:
