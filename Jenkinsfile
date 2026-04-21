@@ -10,7 +10,7 @@ pipeline {
       stage('checkout') {
             steps {
                 echo 'Cloning GIT HUB Repo '
-				git branch: 'main', url: 'https://github.com/adarsh0331/Project_4.git'
+				git branch: 'main', url: 'https://github.com/RakeshKasagani/Project_04_CICD_With_Argocd.git'
             }  
         }
 		
@@ -51,10 +51,10 @@ pipeline {
 			 script {
 			withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerhub')]) 
 			{
-            sh 'docker login -u adarshbarkunta -p ${dockerhub}'
+            sh 'docker login -u rakesh268 -p ${dockerhub}'
 			
 			 }
-			   sh 'docker push adarshbarkunta/mc:${BUILD_NUMBER}'
+			   sh 'docker push rakesh268/mc:${BUILD_NUMBER}'
 			   
            
 				}
@@ -67,7 +67,7 @@ pipeline {
 		
 		 environment {
             GIT_REPO_NAME = "Project_4"
-            GIT_USER_NAME = "adarsh0331"
+            GIT_USER_NAME = "RakeshKasagani"
         }
 		
             steps {
@@ -75,8 +75,8 @@ pipeline {
 				withCredentials([string(credentialsId: 'githubtoken', variable: 'githubtoken')]) 
 				{
                   sh '''
-                    git config user.email "adarsh@gmail.com"
-                    git config user.name "adarsh"
+                    git config user.email "rakesh@gmail.com"
+                    git config user.name "rakesh"
                     BUILD_NUMBER=${BUILD_NUMBER}
                     sed -i "s/mc:.*/mc:${BUILD_NUMBER}/g" deploymentfiles/deployment.yml
                     git add .
