@@ -72,7 +72,7 @@ pipeline {
 		
             steps {
                 echo 'Update Deployment File'
-				withCredentials([string(credentialsId: 'githubtoken', variable: 'githubtoken')]) 
+				withCredentials([string(credentialsId: 'githubtoken', variable: 'github-token')]) 
 				{
                   sh '''
                     git config user.email "rakesh@gmail.com"
