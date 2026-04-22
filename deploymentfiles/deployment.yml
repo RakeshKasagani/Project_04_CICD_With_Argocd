@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: mc-app
-        image: adarshbarkunta/mc:7
+        image: adarshbarkunta/mc:10
         ports:
         - containerPort: 8080
 
