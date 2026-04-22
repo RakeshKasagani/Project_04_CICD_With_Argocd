@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mc-app
+  name: my-app
   labels:
-    app: mc-app
+    app: my-app
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: mc-app
+      app: my-app
   template:
     metadata:
       labels:
-        app: mc-app
+        app: my-app
     spec:
       containers:
-      - name: mc-app
-        image: adarshbarkunta/mc:10
+      - name: my-app
+        image: rakesh268/mc:10
         ports:
         - containerPort: 8080
 
