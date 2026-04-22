@@ -197,7 +197,7 @@ Add credentials in **Manage Jenkins > Manage Credentials > System > Global crede
   - In Jenkins:
     - **Kind**: Secret text
     - **Secret**: GitHub token
-    - **ID**: `github-token`
+    - **ID**: `githubtoken`
     - **Description**: GitHub access token
 
 - **SonarQube Token**:
