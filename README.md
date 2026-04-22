@@ -64,6 +64,16 @@ The CI/CD pipeline automates the following workflow:
    ```
    sudo yum update -y
    ```
+   ### Install git
+   ```
+   sudo yum install git -y
+   git --version
+   ```
+   ### Install maven
+   ```
+   sudo yum install maven -y
+   mvn --version
+   ```
 
 ### 2. Install Jenkins
 Install and configure Jenkins on the EC2 instance:
