@@ -41,7 +41,7 @@ pipeline {
         stage('Docker Image') {
             steps {
                 echo 'Docker Image building'
-				sh 'docker build -t rakesh/mc:${BUILD_NUMBER} .'
+				sh 'docker build -t rakesh268/mc:${BUILD_NUMBER} .'
             }
         }
 		
