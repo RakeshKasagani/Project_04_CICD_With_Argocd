@@ -299,7 +299,7 @@ Create a `Jenkinsfile` in the repository root:
 pipeline {
     agent any
     tools {
-        maven 'maven3'
+        maven 'maven'
     }
     stages {
         stage('Checkout') {
