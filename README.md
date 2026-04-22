@@ -234,6 +234,11 @@ Add credentials in **Manage Jenkins > Manage Credentials > System > Global crede
    - **Name**: `SonarScanner`
    - **Install automatically**: Check or specify path.
 5. Save.
+6. Go to **Manage Jenkins > Tools > maven**.
+ 7. Add:
+   - **Name**: `maven`
+   - **Install automatically**: Check or specify path.
+8. Save.
 
 ### 12. Application Structure
 The GitHub repository should contain:
